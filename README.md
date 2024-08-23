@@ -2,11 +2,7 @@
 
 ## This repository contains copies of the solutions to the tasks from the whole course.
 
----
-
 ## Task 1 - Coffee House
-
----
 
 ### Project's Description
 
