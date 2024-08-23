@@ -1,0 +1,142 @@
+@import "./main.css";
+
+/* FOOTER */
+
+.contacts-block {
+    border-radius: 40px;
+    background: var(--border-dark);
+
+    padding: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    margin: 100px 40px 40px;
+}
+
+.social-networks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+
+    max-width: 530px;
+}
+
+.social-networks-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-networks-links a{
+    border-radius: 100px;
+    border: 1px solid var(--border-light);
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-duration: 0.4s;
+}
+
+@media (hover: hover) {    
+    .twitter:hover,
+    .instagram:hover,
+    .facebook:hover {
+        border: 1px solid var(--main-bg-color);
+        background-color: var(--main-bg-color);
+    }
+    
+    .twitter:hover svg path,
+    .instagram:hover svg path,
+    .facebook:hover svg path {
+        stroke: var(--text-dark);
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    
+    padding: 0;
+    margin: 0;
+}
+
+.contacts a {
+    text-decoration: none;
+}
+
+.contacts a svg {
+    margin-right: 8px;
+}
+
+.contacts-address,
+.contacts-phone,
+.contacts-schedule {
+    position: relative;
+}
+
+.contacts-address:hover,
+.contacts-phone:hover,
+.contacts-schedule:hover {
+    cursor: pointer;
+}
+
+.contacts-address::before,
+.contacts-phone::before,
+.contacts-schedule::before  {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-light);
+}
+
+@media (hover: hover) {    
+    .contacts-address:hover:before,
+    .contacts-phone:hover:before,
+    .contacts-schedule:hover:before  {
+        width: 100%;
+    }
+}
+
+.contacts-address::before,
+.contacts-phone::before,
+.contacts-schedule::before  {
+    transition: width 0.5s ease-in-out;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width:768px) {
+    .contacts-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 100px 60px;
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 767px) {
+    .contacts-block {
+        padding: 60px 16px;
+
+        gap: 40px;
+    
+        margin: 100px 16px 40px;
+    }
+}

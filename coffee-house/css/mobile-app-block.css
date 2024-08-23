@@ -1,0 +1,94 @@
+@import "./main.css";
+
+/* mobile-app-block */
+
+.mobile-app-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.mobile-app-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+    max-width: 688px;
+}
+
+.mobile-app-block img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* mobile-app-block__buttons */
+
+.mobile-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.mobile-btn__app a{
+    display: flex;
+    width: 200px;
+    padding: 12px 20px;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 100px;
+    border: 1px solid var(--border-dark);
+    background: var(--main-bg-color);
+    text-decoration: none;
+
+    transition-duration: 0.4s;
+}
+
+.mobile-btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+@media (hover: hover) {    
+    .mobile-btn__app a:hover {
+        background-color: var(--dark-bg-color);
+    }
+    
+    .mobile-btn__app:hover .mobile-btn-text__available,
+    .mobile-btn__app:hover .mobile-btn-text__app {
+        color: var(--text-light);
+    }
+    
+    .mobile-btn__app .apple:hover svg path {
+        fill: var(--text-light);
+    }
+    
+    .mobile-btn__app .google:hover svg path {
+        fill: var(--text-light);
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .mobile-app-block {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-btn  {
+        flex-direction: column;
+    }
+
+    .mobile-app-block {
+        gap: 40px;
+    }
+}

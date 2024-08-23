@@ -1,0 +1,213 @@
+@import "./main.css";
+
+/* modal */
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    /* opacity: 0; */
+    transition: all 0.5s ease-in-out;
+}
+
+.modal.active-modal {
+    background: rgba(64, 63, 61, 0.80);
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 1; */
+    transition: all 0.5s ease-in-out;
+}
+
+.modal-wrapper {
+    background-color: var(--main-bg-color);    
+    border-radius: 40px;
+
+    max-width: 800px;
+    padding: 16px;
+    margin: auto;
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-img img {
+    display: block;
+    height: 310px;
+    width: 310px;
+    object-position: center;
+    border-radius: 40px;
+}
+
+.modal-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+}
+
+.modal-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.size-block,
+.adds-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.size-buttons,
+.adds-buttons {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.size-buttons__item,
+.adds-buttons__item {
+    display: flex;
+    padding: 8px 16px 8px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 100px;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--border-light);
+    color: var(--text-dark);
+
+    transition: all 0.4s ease-in-out;
+}
+
+.size-buttons__item span,
+.adds-buttons__item span {
+    border-radius: 100px;
+    background-color: var(--border-light);
+
+    width: 30px;
+    padding: 3px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.size-btn-active,
+.adds-btn-active {
+    background-color: var(--dark-bg-color);
+    color: var(--text-light);
+}
+
+.size-btn-active span,
+.adds-btn-active span {
+    background-color: var(--main-bg-color);
+    color: var(--text-dark);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.alert {
+    display: flex;
+    padding: 12px 0px;
+    align-items: flex-start;
+    gap: 8px;
+    
+    border-top: 1px solid var(--border-light);
+}
+
+.alert img {
+    width: 16px;
+    height: 16px;
+}
+
+.close-btn {
+    display: flex;
+    padding: 10px 78px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+
+    border-radius: 100px;
+    border: 1px solid var(--border-dark);
+    background-color: var(--main-bg-color);
+
+    transition: 0.4s ease-in-out;
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+@media (hover: hover) {    
+    .size-buttons li:hover,
+    .adds-buttons li:hover {
+        cursor: pointer;
+        background-color: var(--dark-bg-color);
+        color: var(--text-light);
+    }
+    
+    .size-buttons__item:hover span,
+    .adds-buttons__item:hover span {
+        background-color: var(--main-bg-color);
+        color: var(--text-dark);
+    }
+
+    .size-btn-active,
+    .adds-btn-active {
+        cursor: default;
+}
+
+    .close-btn:hover {
+        cursor: pointer;
+        background-color: var(--dark-bg-color);
+        color: var(--text-light);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .modal-wrapper {
+        max-width: 656px;
+        width: 100%;
+        margin: 0 10px;
+    }
+    .modal-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .modal-img{
+        display: none;
+    }
+
+    .modal-wrapper {
+        width: 310px;
+    }
+}

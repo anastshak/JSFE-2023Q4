@@ -1,0 +1,99 @@
+@import "./main.css";
+
+/* menu-heading */
+
+.menu-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu-heading h1 {
+    text-align: center;
+    width: 800px;
+}
+
+.tabs-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.tabs-list li {
+    display: flex;
+    padding: 8px 16px 8px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 100px;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--border-light);
+
+    /* transition: background-color 0.4s ease-in-out;
+    transition: border 0.4s ease-in-out; */
+    transition: all 0.4s ease-in-out;
+}
+
+.tabs-list__item span {
+    border-radius: 100px;
+    background-color: var(--border-light);
+
+    display: flex;
+    padding: 3px 7px;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.tabs-list__item span img{
+    width: 16px;
+    height: 24px;
+}
+
+.btn-coffee.active,
+.btn-tea.active,
+.btn-dessert.active {
+    background-color: var(--dark-bg-color);
+    color: var(--text-light);
+}
+
+.btn-coffee.active span,
+.btn-tea.active span,
+.btn-dessert.active span {
+    background-color: var(--main-bg-color);
+}
+
+@media (hover: hover) {    
+    .tabs-list li:hover {
+        cursor: pointer;
+        background-color: var(--dark-bg-color);
+        color: var(--text-light);
+    }
+    
+    .tabs-list__item:hover span {
+        background-color: var(--main-bg-color);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-heading h1 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .tabs-list {
+        gap: 8px;
+    }
+}

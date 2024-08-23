@@ -1,0 +1,145 @@
+@import "./main.css";
+
+/* favorite-coffee-block */
+
+.favorite-coffee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.favorite-coffee h2 {
+    text-align: center;
+}
+
+/* favorite-coffee-block__slider */
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+    padding: 0 4px;
+    gap: 40px;
+}
+
+.slide-description{
+    text-align: center;
+}
+
+.btn-slider {
+    border-radius: 100px;
+    border: 1px solid var(--border-dark);
+    background-color: var(--main-bg-color);
+
+    display: flex;
+    min-width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+
+    transition-duration: 0.4s;
+}
+
+.btn-slider svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (hover: hover) {    
+    .btn-slider:hover {
+        background-color: var(--dark-bg-color);
+        cursor: pointer;
+    }
+    
+    .btn-slider:hover svg path {
+        stroke: var(--main-bg-color);
+    }
+}
+
+.carousel {
+    width: 480px;
+    overflow: hidden;
+}
+
+.slider-line {
+    display: flex;
+    position: relative;
+
+    left: 0;
+    transition: left 0.5s ease-in-out;
+}
+
+.slider-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.slider-card img {
+    width: 480px;
+    height: 100%;
+
+    display: block;
+}
+
+.slide-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* switcher */
+
+.control-switcher {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.btn {
+    width: 40px;
+    height: 4px;
+
+    border-radius: 100px;
+    border: none;
+    background-color: var(--border-light);
+}
+
+.btn-active {
+    background-color: var(--dark-bg-color);
+}
+
+@media screen and (max-width:768px) {
+    .slider {
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn-slider{
+        display: none;
+    }
+
+    .slider-card {
+        width: 100%;
+    }
+
+    .slider-card img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .slider-card img {
+        width: 348px;
+        height: 348px;
+    }
+}

@@ -1,0 +1,174 @@
+:root {
+    --main-bg-color: #E1D4C9;
+    --dark-bg-color: #665F55;
+    --img-bg-color: #403F3DCC;
+
+    --text-dark: #403F3D;
+    --text-light: #E1D4C9;
+    --text-accent: #B0907A;
+
+    --border-dark: #665F55;
+    --border-light: #C1B6AD;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--main-bg-color);
+    background-size: cover;
+}
+
+header,
+main,
+footer {
+    max-width: 1440px;
+    margin: 0 auto;
+} 
+
+/* font */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.dark-text {
+    color: var(--text-dark);
+    font-style: normal;
+}
+
+.light-text {
+    color: var(--text-light);
+    font-style: normal;
+}
+
+.accent-text {
+    color: var(--text-accent);
+    font-style: italic;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 105%;
+
+    margin: 0;
+}
+
+h2 {
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 125%;
+   
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 125%;
+
+    margin: 0;
+}
+
+.medium-text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+
+    margin: 0;
+}
+
+.link-btn-font {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 150%;
+
+    margin: 0;
+}
+
+.contact-text{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%;
+
+    margin: 0;
+}
+
+.caption-font {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 140%;
+
+    margin: 0;
+}
+
+.menu-title{
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+   
+    margin: 0;
+}
+
+/* MAIN-HOME-CONTAINER */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    padding: 0 40px;
+}
+
+/* MAIN-MENU-CONTAINER */
+
+.main-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    padding: 0 40px;
+}
+
+@media (pointer: coarse) {
+    * {
+        cursor: default;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-container {
+        padding: 0 16px;
+    }
+
+    .main-menu-container {
+        padding: 0 16px;
+    }
+
+    h1 {
+        font-size: 2.625rem;
+        line-height: 115%;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        line-height: 125%;
+    }
+
+    .menu-title{
+        font-size: 32px;
+    }
+}
