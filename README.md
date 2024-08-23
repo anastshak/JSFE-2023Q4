@@ -18,3 +18,7 @@ Coffee House is a project where you will need to create a website consisting of 
 ### Deploy link
 
 https://rolling-scopes-school.github.io/anastshak-JSFE2023Q4/coffee-house/
+
+### Screenshot
+
+![Screenshot](/img/scr.png)
