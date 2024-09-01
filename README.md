@@ -2,7 +2,7 @@
 
 ## This repository contains copies of the solutions to the tasks from the whole course.
 
-## Task 1 - Hangman
+## Task 2 - Hangman
 
 ### Project's Description
 
@@ -12,7 +12,6 @@ Hangman is a classic word game in which you must find the correct answer by gues
 
 - Valid semantic responsive web design;
 - Easy-to-maintain readable code;
-- Exporting styles and graphics from Figma;
 - Using JavaScript to implement the functionality specified in the task.
 
 ### Deploy link
