@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "plugins": ["@typescript-eslint", "prettier", "import"],
+  "extends": [
+    "airbnb-typescript/base",
+    "eslint-config-airbnb-base",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "no-debugger": "off",
+    "no-param-reassign": 0,
+    "no-console": 0,
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "class-methods-use-this": "off",
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "@typescript-eslint/no-explicit-any": 2,
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "import/no-mutable-exports": "off", // fix the error (export let page! edit-form-func)
+    "import/no-cycle": "off", // fix the error (cars-list and edit-form-func)
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      }
+    }
+  }
+}

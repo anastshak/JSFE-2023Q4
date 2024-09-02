@@ -1,0 +1,51 @@
+.cars-list {
+  margin: 30px 0;
+}
+
+.cars-list__item {
+  border-bottom: 2px solid var(--black);
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.car-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  margin-right: 10px;
+}
+
+.car-options {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.car-track {
+  width: 85%;
+}
+
+.form {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 5px;
+}
+
+.text-input {
+  padding-left: 5px;
+}
+
+.create-car-bth,
+.update-car-bth {
+  width: 73px;
+}
+
+.form__options button {
+  padding: 5px 7px;
+}

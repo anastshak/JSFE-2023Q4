@@ -1,0 +1,18 @@
+.page-btn,
+.nav-btn {
+  margin-right: 15px;
+}
+
+/* .page-bth:hover,
+.nav-btn:hover {
+  cursor: pointer;
+}
+
+.page-bth[disabled]:hover,
+.nav-btn[disabled]:hover {
+  cursor: default;
+} */
+
+.pagination {
+  margin: 100px 0 50px 50px;
+}

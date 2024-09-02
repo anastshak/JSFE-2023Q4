@@ -1,0 +1,37 @@
+.winners-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid var(--table-border);
+  border-collapse: collapse;
+}
+
+.winners-table th,
+.winners-table td {
+  padding: 5px;
+  border: 2px solid var(--table-border);
+}
+
+.winners-table th {
+  background-color: var(--table-bg);
+}
+
+.winners-table td {
+  text-align: center;
+}
+
+/* number, wins, best time */
+.winners-table th:nth-child(1),
+.winners-table th:nth-child(4),
+.winners-table th:nth-child(5) {
+  min-width: 75px;
+}
+
+/* car img */
+.winners-table th:nth-child(2) {
+  min-width: 150px;
+}
+
+/* car name */
+.winners-table th:nth-child(3) {
+  min-width: 200px;
+}
